@@ -163,7 +163,6 @@
       color: var(--accent);
     }
 
-    /* Zona de colar compacta */
     .paste-zone {
       flex: 1;
       min-width: 140px;
@@ -210,11 +209,6 @@
     .status.error { color: var(--danger); }
     .status.ok { color: var(--success); }
 
-    .hint {
-      font-size: 0.72rem;
-      color: var(--muted);
-    }
-
     .progress {
       height: 3px;
       background: var(--border);
@@ -232,7 +226,6 @@
       transition: width 0.2s;
     }
 
-    /* Cards de tabela */
     .card {
       background: var(--card);
       border: 1px solid var(--border);
@@ -269,7 +262,6 @@
       border-radius: 999px;
     }
 
-    /* ===== Tabelas estilo Excel (modo claro) ===== */
     .table-wrap {
       overflow-x: auto;
       overflow-y: auto;
@@ -300,7 +292,6 @@
       height: 20px;
     }
 
-    /* Cabeçalho de nomes das colunas */
     th {
       background: #f2f2f2;
       position: sticky;
@@ -312,47 +303,6 @@
       font-size: 0.8rem;
       letter-spacing: 0;
       border-color: #b4b4b4;
-    }
-
-    /* Letras de coluna (A B C...) — estilo Excel */
-    th.col-letter {
-      text-align: center;
-      color: #333333;
-      font-weight: 600;
-      font-size: 0.75rem;
-      text-transform: none;
-      letter-spacing: 0;
-      background: #e7e6e6;
-      border-color: #b4b4b4;
-      border-bottom: 1px solid #b4b4b4;
-      cursor: pointer;
-      user-select: none;
-      position: sticky;
-      top: 0;
-      z-index: 3;
-      height: 18px;
-      transition: background 0.12s, color 0.12s;
-    }
-
-    th.col-letter:hover {
-      background: #d0d0d0;
-      color: #000;
-    }
-
-    th.col-letter.selected-col {
-      background: #217346;
-      color: #ffffff;
-    }
-
-    th.col-letter.blank {
-      cursor: default;
-      background: #e7e6e6;
-      min-width: 36px;
-    }
-
-    th.col-letter.blank:hover {
-      background: #e7e6e6;
-      color: #333;
     }
 
     tr:nth-child(even) { background: #ffffff; }
@@ -367,25 +317,6 @@
       font-family: Calibri, 'Segoe UI', Arial, sans-serif;
     }
 
-    td.row-num {
-      color: #333333;
-      font-size: 0.75rem;
-      text-align: center;
-      padding-left: 4px;
-      padding-right: 4px;
-      background: #e7e6e6;
-      border-color: #b4b4b4;
-      font-weight: 500;
-      min-width: 36px;
-      position: sticky;
-      left: 0;
-      z-index: 1;
-    }
-
-    tr.selected-row td.row-num {
-      background: #a9d08e;
-    }
-
     td.col-selected {
       background: #e2efda;
     }
@@ -394,7 +325,6 @@
       background: #c6efce;
     }
 
-    /* Seleção de células estilo Excel */
     td.cell-selected,
     th.cell-selected {
       background: #5b9bd5 !important;
@@ -417,47 +347,6 @@
 
     .table-wrap, .result-table-wrap {
       user-select: none;
-    }
-
-    /* Barra de soma das células selecionadas */
-    .selection-sum {
-      position: sticky;
-      bottom: 8px;
-      background: #1e3a5f;
-      border: 1px solid var(--accent);
-      border-radius: 8px;
-      padding: 8px 14px;
-      margin-top: 8px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: #e7ecf3;
-      display: none;
-      align-items: center;
-      gap: 12px;
-      z-index: 20;
-      box-shadow: 0 -2px 10px rgba(0,0,0,0.35);
-    }
-
-    .selection-sum.visible {
-      display: flex;
-    }
-
-    .selection-sum .sum-label {
-      color: var(--muted);
-      font-weight: 500;
-      font-size: 0.8rem;
-    }
-
-    .selection-sum .sum-value {
-      color: #4ade80;
-      font-size: 1.15rem;
-      font-variant-numeric: tabular-nums;
-    }
-
-    .selection-sum .sum-count {
-      color: var(--muted);
-      font-size: 0.75rem;
-      margin-left: auto;
     }
 
     .results-list {
@@ -535,18 +424,6 @@
       border-color: #b4b4b4;
     }
 
-    .result-table th.col-letter {
-      text-align: center;
-      color: #333333;
-      font-weight: 600;
-      font-size: 0.75rem;
-      text-transform: none;
-      letter-spacing: 0;
-      background: #e7e6e6;
-      border-color: #b4b4b4;
-      cursor: default;
-    }
-
     .result-table tr:nth-child(even),
     .result-table tr:nth-child(odd) { background: #ffffff; }
 
@@ -554,15 +431,6 @@
       font-variant-numeric: tabular-nums;
       text-align: right;
       font-family: Calibri, 'Segoe UI', Arial, sans-serif;
-    }
-
-    .result-table td.row-num {
-      color: #333333;
-      font-size: 0.75rem;
-      text-align: center;
-      background: #e7e6e6;
-      border-color: #b4b4b4;
-      font-weight: 500;
     }
 
     .empty {
@@ -584,16 +452,6 @@
       .sep { display: none; }
       #targetInput, select, .paste-zone { max-width: 100%; width: 100%; }
       input[type="file"] { max-width: 100%; }
-    }
-
-    .aviso-importacao {
-      background: #fff3cd;
-      border: 1px solid #ffc107;
-      border-radius: 8px;
-      padding: 12px 15px;
-      margin: 15px 0;
-      color: #664d03;
-      font-size: 14px;
     }
 
     /* ===== Tela de Login ===== */
@@ -691,7 +549,6 @@
       <p>Carregue, cole ou escolha a coluna e o valor-alvo. Clique no cabeçalho para selecionar a coluna. Ctrl+clique ou arraste para selecionar células e ver a soma.</p>
     </header>
 
-    <!-- Toolbar compacta -->
     <div class="toolbar">
       <div class="group">
         <div class="field-inline">
@@ -706,12 +563,9 @@
 
       <div class="sep"></div>
 
-      <div
-        class="paste-zone"
-        id="pasteZone"
-        tabindex="0"
-        title="Clique e cole (Ctrl+V) ou arraste um arquivo .xlsx/.csv"
-      >Cole aqui (Ctrl+V)</div>
+      <div class="paste-zone" id="pasteZone" tabindex="0" title="Clique e cole (Ctrl+V) ou arraste um arquivo .xlsx/.csv">
+        Cole aqui (Ctrl+V)
+      </div>
 
       <div class="sep"></div>
 
@@ -739,7 +593,6 @@
       <div class="status" id="selectionStatus" style="display:none; color:#4ade80; font-weight:600;"></div>
     </div>
 
-    <!-- Tabela da planilha -->
     <div class="card" id="tableCard" style="display:none">
       <div class="card-header-row">
         <h2>Dados <span class="badge" id="rowCount">0</span></h2>
@@ -753,20 +606,24 @@
       </div>
     </div>
 
-    <!-- Resultados -->
     <div class="card" id="resultsCard" style="display:none">
       <div class="card-header-row">
         <h2>Combinações <span class="badge" id="resultCount">0</span></h2>
       </div>
       <div class="results-list" id="resultsList"></div>
     </div>
-
   </div>
 
   <script>
-    // ========== LOGIN ==========
-    const LOGIN_USER = 'rai';
-    const LOGIN_PASS = 'Rai.2310';
+    // ========== LOGIN (vários usuários) ==========
+    // Para adicionar ou remover usuários, edite apenas este objeto:
+    const USUARIOS = {
+      'rai': 'Rai.2310',
+      'mariana': '1234',
+      'izaque': '1234'
+      // adicione mais assim:
+      // 'nome': 'senha',
+    };
 
     const loginOverlay = document.getElementById('loginOverlay');
     const loginUser = document.getElementById('loginUser');
@@ -775,7 +632,6 @@
     const loginError = document.getElementById('loginError');
     const mainApp = document.getElementById('mainApp');
 
-    // Se já estiver logado nesta sessão, não pede de novo
     if (sessionStorage.getItem('logado') === 'true') {
       loginOverlay.style.display = 'none';
       mainApp.style.display = 'block';
@@ -785,7 +641,7 @@
       const user = loginUser.value.trim();
       const pass = loginPass.value;
 
-      if (user === LOGIN_USER && pass === LOGIN_PASS) {
+      if (USUARIOS[user] && USUARIOS[user] === pass) {
         sessionStorage.setItem('logado', 'true');
         loginOverlay.style.display = 'none';
         mainApp.style.display = 'block';
@@ -830,14 +686,12 @@
     const progressBar = document.getElementById('progressBar');
     const pasteZone = document.getElementById('pasteZone');
 
-    // ========== Utilitários de número ==========
     function parseNumber(val) {
       if (val == null || val === '') return null;
       if (typeof val === 'number' && !isNaN(val)) return val;
       let s = String(val).trim();
       if (!s) return null;
       s = s.replace(/[R$\s]/g, '');
-      // Formato BR: 1.300,00 | 1.300 | 1300,00 | 1.234.567,89
       if (/^-?\d{1,3}(\.\d{3})*(,\d+)?$/.test(s) || /^-?\d+,\d+$/.test(s)) {
         s = s.replace(/\./g, '').replace(',', '.');
       } else {
@@ -864,39 +718,24 @@
 
     function displayCell(val) {
       if (val == null || val === '') return '';
-
-      if (val instanceof Date && !isNaN(val.getTime())) {
-        return formatDateBR(val);
-      }
-
+      if (val instanceof Date && !isNaN(val.getTime())) return formatDateBR(val);
       if (typeof val === 'number' && val > 20000 && val < 80000 && Number.isInteger(val)) {
         const d = new Date(Date.UTC(1899, 11, 30 + val));
         return formatDateBR(d);
       }
-
       const s = String(val).trim();
-
       const m = s.match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{2,4})$/);
       if (m) {
         let a = parseInt(m[1], 10);
         let b = parseInt(m[2], 10);
         let y = m[3];
         if (y.length === 2) y = (parseInt(y, 10) > 50 ? '19' : '20') + y;
-
         let day, month;
-        if (b > 12 && a <= 12) {
-          month = a;
-          day = b;
-        } else if (a > 12 && b <= 12) {
-          day = a;
-          month = b;
-        } else {
-          day = a;
-          month = b;
-        }
+        if (b > 12 && a <= 12) { month = a; day = b; }
+        else if (a > 12 && b <= 12) { day = a; month = b; }
+        else { day = a; month = b; }
         return String(day).padStart(2, '0') + '/' + String(month).padStart(2, '0') + '/' + y;
       }
-
       const n = parseNumber(val);
       if (n === null) return s;
       if (/^-?\d{1,3}(\.\d{3})*,\d+$/.test(s) || /^-?\d+,\d+$/.test(s)) return s;
@@ -915,11 +754,8 @@
 
     function downloadExcel(rowIndices, filename) {
       if (!headers.length || !sheetData.length) return;
-      const rows = (rowIndices == null)
-        ? sheetData
-        : rowIndices.map(i => sheetData[i]).filter(Boolean);
+      const rows = (rowIndices == null) ? sheetData : rowIndices.map(i => sheetData[i]).filter(Boolean);
       if (!rows.length) return;
-
       const aoa = [headers.slice()];
       rows.forEach(row => {
         aoa.push(headers.map(h => {
@@ -928,21 +764,17 @@
           return n !== null ? n : (v ?? '');
         }));
       });
-
       const ws = XLSX.utils.aoa_to_sheet(aoa);
       const wb = XLSX.utils.book_new();
       XLSX.utils.book_append_sheet(wb, ws, 'Dados');
       XLSX.writeFile(wb, filename || 'export.xlsx');
     }
 
-    // ========== Parse texto colado ==========
     function parsePastedText(text) {
       text = text.replace(/\r\n/g, '\n').replace(/\r/g, '\n').trim();
       if (!text) return null;
-
       const lines = text.split('\n').filter(l => l.trim() !== '');
       if (!lines.length) return null;
-
       const first = lines[0];
       let delim = '\t';
       if (!first.includes('\t')) {
@@ -950,7 +782,6 @@
         const comma = (first.match(/,/g) || []).length;
         delim = semi > comma ? ';' : ',';
       }
-
       function splitLine(line) {
         if (delim === '\t') return line.split('\t');
         const cells = [];
@@ -971,20 +802,15 @@
         cells.push(cur);
         return cells;
       }
-
       const rows = lines.map(splitLine);
       const maxCols = Math.max(...rows.map(r => r.length));
       if (maxCols === 0) return null;
-
       rows.forEach(r => { while (r.length < maxCols) r.push(''); });
-
       const firstRow = rows[0];
       let numericCount = 0;
       firstRow.forEach(c => { if (parseNumber(c) !== null) numericCount++; });
       const looksLikeHeader = numericCount < firstRow.length * 0.5;
-
-      let hdrs;
-      let dataRows;
+      let hdrs, dataRows;
       if (looksLikeHeader && rows.length > 1) {
         hdrs = firstRow.map((h, i) => {
           const t = String(h).trim();
@@ -995,7 +821,6 @@
         hdrs = Array.from({ length: maxCols }, (_, i) => 'Coluna ' + colLetter(i));
         dataRows = rows;
       }
-
       const seen = {};
       hdrs = hdrs.map(h => {
         let name = h;
@@ -1007,13 +832,11 @@
         }
         return name;
       });
-
       const json = dataRows.map(r => {
         const obj = {};
         hdrs.forEach((h, i) => { obj[h] = r[i] != null ? String(r[i]).trim() : ''; });
         return obj;
       });
-
       return { headers: hdrs, data: json };
     }
 
@@ -1022,7 +845,6 @@
       sheetData = data;
       workbook = null;
       sheetField.style.display = 'none';
-
       if (!sheetData.length) {
         columnSelect.innerHTML = '<option value="">— sem dados —</option>';
         columnSelect.disabled = true;
@@ -1035,7 +857,6 @@
         renderTable();
         return;
       }
-
       columnSelect.innerHTML = '';
       let firstNumeric = null;
       headers.forEach((h, idx) => {
@@ -1047,25 +868,20 @@
         if (isNumeric && firstNumeric === null) firstNumeric = h;
         columnSelect.appendChild(opt);
       });
-
       if (firstNumeric) columnSelect.value = firstNumeric;
       columnSelect.disabled = false;
       targetInput.disabled = false;
       solveBtn.disabled = false;
-
       pasteZone.classList.add('has-data');
       pasteZone.textContent = sheetData.length + ' linhas';
-
       renderTable();
       resultsCard.style.display = 'none';
       selectedIndices.clear();
       if (typeof clearCellSelection === 'function') clearCellSelection();
-
       loadStatus.textContent = sourceLabel + ': ' + sheetData.length + ' linha(s), ' + headers.length + ' coluna(s)';
       loadStatus.className = 'status ok';
     }
 
-    // ========== Zona de colar ==========
     function handlePasteText(text) {
       const parsed = parsePastedText(text);
       if (!parsed) {
@@ -1077,13 +893,6 @@
     }
 
     pasteZone.addEventListener('click', () => pasteZone.focus());
-
-    pasteZone.addEventListener('keydown', (e) => {
-      if ((e.ctrlKey || e.metaKey) && e.key === 'v') {
-        // deixa o paste do navegador ocorrer
-      }
-    });
-
     pasteZone.addEventListener('paste', (e) => {
       e.preventDefault();
       const text = e.clipboardData && e.clipboardData.getData('text/plain');
@@ -1094,16 +903,13 @@
       if (document.activeElement === pasteZone) return;
       const tag = document.activeElement && document.activeElement.tagName;
       if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
-
       const text = e.clipboardData && e.clipboardData.getData('text/plain');
       if (!text || !text.trim()) return;
       if (!text.includes('\t') && text.split(/\r?\n/).filter(l => l.trim()).length < 2) return;
-
       e.preventDefault();
       handlePasteText(text);
     });
 
-    // Drag & drop
     pasteZone.addEventListener('dragover', (e) => {
       e.preventDefault();
       pasteZone.classList.add('drag-over');
@@ -1112,7 +918,6 @@
     pasteZone.addEventListener('drop', async (e) => {
       e.preventDefault();
       pasteZone.classList.remove('drag-over');
-
       const files = e.dataTransfer && e.dataTransfer.files;
       if (files && files.length > 0) {
         const file = files[0];
@@ -1122,19 +927,16 @@
           return;
         }
       }
-
       const text = e.dataTransfer && e.dataTransfer.getData('text/plain');
       if (text) handlePasteText(text);
     });
 
-    // ========== Carregar Excel ==========
     async function loadFile(file) {
       loadStatus.textContent = 'Lendo arquivo...';
       loadStatus.className = 'status';
       try {
         const buffer = await file.arrayBuffer();
         workbook = XLSX.read(buffer, { type: 'array', cellDates: true });
-
         sheetSelect.innerHTML = '';
         workbook.SheetNames.forEach((name, i) => {
           const opt = document.createElement('option');
@@ -1143,7 +945,6 @@
           if (i === 0) opt.selected = true;
           sheetSelect.appendChild(opt);
         });
-
         sheetField.style.display = workbook.SheetNames.length > 1 ? 'flex' : 'none';
         loadSheet(workbook.SheetNames[0]);
         loadStatus.textContent = file.name + ' (' + workbook.SheetNames.length + ' aba(s))';
@@ -1168,12 +969,7 @@
 
     function loadSheet(sheetName) {
       const sheet = workbook.Sheets[sheetName];
-      const json = XLSX.utils.sheet_to_json(sheet, {
-        defval: '',
-        raw: false,
-        dateNF: 'dd/mm/yyyy'
-      });
-
+      const json = XLSX.utils.sheet_to_json(sheet, { defval: '', raw: false, dateNF: 'dd/mm/yyyy' });
       if (!json.length) {
         sheetData = [];
         headers = [];
@@ -1186,10 +982,8 @@
         loadStatus.className = 'status error';
         return;
       }
-
       headers = Object.keys(json[0]);
       sheetData = json;
-
       columnSelect.innerHTML = '';
       let firstNumeric = null;
       headers.forEach((h, idx) => {
@@ -1201,12 +995,10 @@
         if (isNumeric && firstNumeric === null) firstNumeric = h;
         columnSelect.appendChild(opt);
       });
-
       if (firstNumeric) columnSelect.value = firstNumeric;
       columnSelect.disabled = false;
       targetInput.disabled = false;
       solveBtn.disabled = false;
-
       renderTable();
       resultsCard.style.display = 'none';
       selectedIndices.clear();
@@ -1218,17 +1010,13 @@
         tableCard.style.display = 'none';
         return;
       }
-
       tableCard.style.display = 'block';
       rowCount.textContent = sheetData.length;
-
       const thead = dataTable.querySelector('thead');
       const tbody = dataTable.querySelector('tbody');
       thead.innerHTML = '';
       tbody.innerHTML = '';
-
       const selectedCol = columnSelect.value;
-
       const hr = document.createElement('tr');
       headers.forEach(h => {
         const th = document.createElement('th');
@@ -1248,12 +1036,10 @@
         hr.appendChild(th);
       });
       thead.appendChild(hr);
-
       sheetData.forEach((row, i) => {
         const tr = document.createElement('tr');
         tr.dataset.index = i;
         if (selectedIndices.has(i)) tr.classList.add('selected-row');
-
         headers.forEach(h => {
           const td = document.createElement('td');
           td.textContent = displayCell(row[h]);
@@ -1274,21 +1060,14 @@
       resultsCard.style.display = 'none';
     });
 
-    // ========== Solver ==========
     function findSubsets(values, target, maxFound) {
       const n = values.length;
       if (n === 0) return [];
-
       const targetCents = Math.round(target * 100);
-      const items = values.map(v => ({
-        index: v.index,
-        cents: Math.round(v.value * 100)
-      }));
-
+      const items = values.map(v => ({ index: v.index, cents: Math.round(v.value * 100) }));
       const mid = Math.floor(n / 2);
       const left = items.slice(0, mid);
       const right = items.slice(mid);
-
       function allSubsets(arr) {
         const map = new Map();
         const m = arr.length;
@@ -1307,14 +1086,11 @@
         }
         return map;
       }
-
       const leftMap = allSubsets(left);
       const rightMap = allSubsets(right);
-
       const results = [];
       const seen = new Set();
       const collectCap = Math.min(Math.max(maxFound * 40, 80), 400);
-
       outer:
       for (const [sumL, combosL] of leftMap) {
         const need = targetCents - sumL;
@@ -1331,7 +1107,6 @@
           }
         }
       }
-
       results.sort((a, b) => {
         const len = Math.min(a.length, b.length);
         for (let i = 0; i < len; i++) {
@@ -1339,7 +1114,6 @@
         }
         return a.length - b.length;
       });
-
       return results.slice(0, maxFound);
     }
 
@@ -1348,7 +1122,6 @@
       html += '<tr>';
       headers.forEach(h => { html += '<th>' + h + '</th>'; });
       html += '</tr></thead><tbody>';
-
       idxs.forEach(i => {
         const row = sheetData[i];
         html += '<tr>';
@@ -1362,7 +1135,6 @@
         });
         html += '</tr>';
       });
-
       html += '</tbody></table></div>';
       return html;
     }
@@ -1370,7 +1142,6 @@
     solveBtn.addEventListener('click', () => {
       const col = columnSelect.value;
       const target = parseNumber(targetInput.value);
-
       if (!col) {
         solveStatus.textContent = 'Selecione a coluna numérica.';
         solveStatus.className = 'status error';
@@ -1381,19 +1152,16 @@
         solveStatus.className = 'status error';
         return;
       }
-
       const values = [];
       sheetData.forEach((row, i) => {
         const n = parseNumber(row[col]);
         if (n !== null && n > 0) values.push({ index: i, value: n });
       });
-
       if (values.length === 0) {
         solveStatus.textContent = 'Nenhum número válido na coluna.';
         solveStatus.className = 'status error';
         return;
       }
-
       if (values.length > 40) {
         solveStatus.textContent = values.length + ' números — pode demorar (máx. ~36 recomendado).';
         solveStatus.className = 'status';
@@ -1401,22 +1169,18 @@
         solveStatus.textContent = 'Buscando entre ' + values.length + ' números...';
         solveStatus.className = 'status';
       }
-
       progress.style.display = 'block';
       progressBar.style.width = '30%';
       solveBtn.disabled = true;
-
       setTimeout(() => {
         try {
           progressBar.style.width = '60%';
           const max = parseInt(maxResults.value, 10) || 1;
           const subsets = findSubsets(values, target, max);
           progressBar.style.width = '100%';
-
           selectedIndices.clear();
           if (typeof clearCellSelection === 'function') clearCellSelection();
           resultsList.innerHTML = '';
-
           if (subsets.length === 0) {
             resultsCard.style.display = 'block';
             resultCount.textContent = '0';
@@ -1426,19 +1190,15 @@
           } else {
             resultCount.textContent = subsets.length + (subsets.length >= max ? '+' : '');
             resultsCard.style.display = 'block';
-
             subsets.forEach((idxs, solNum) => {
               idxs.forEach(i => selectedIndices.add(i));
-
               let sum = 0;
               idxs.forEach(i => {
                 const val = parseNumber(sheetData[i][col]);
                 if (val !== null) sum += val;
               });
-
               const card = document.createElement('div');
               card.className = 'result-card';
-
               const header = document.createElement('div');
               header.className = 'result-card-header';
               header.innerHTML = '<h3>Combinação ' + (solNum + 1) + '</h3>';
@@ -1451,23 +1211,18 @@
               });
               header.appendChild(dlBtn);
               card.appendChild(header);
-
               const tableWrap = document.createElement('div');
               tableWrap.innerHTML = buildResultTableHtml(idxs, col);
               card.appendChild(tableWrap);
-
               const sumLine = document.createElement('div');
               sumLine.className = 'sum-line';
               sumLine.textContent = 'Soma = ' + formatBR(sum);
               card.appendChild(sumLine);
-
               resultsList.appendChild(card);
             });
-
             solveStatus.textContent = subsets.length + ' combinação(ões) = ' + formatBR(target);
             solveStatus.className = 'status ok';
           }
-
           renderTable();
         } catch (err) {
           console.error(err);
@@ -1491,7 +1246,7 @@
       downloadExcel(null, 'planilha_completa.xlsx');
     });
 
-    // ========== Seleção de células (Ctrl+clique / arrastar) + Soma ==========
+    // ========== Seleção de células ==========
     let selectedCells = new Set();
     let lastClickedCell = null;
     let isDragging = false;
@@ -1520,10 +1275,7 @@
       let count = 0;
       selectedCells.forEach(cell => {
         const n = parseNumber(cell.textContent);
-        if (n !== null) {
-          sum += n;
-          count++;
-        }
+        if (n !== null) { sum += n; count++; }
       });
       if (selectedCells.size === 0 || count === 0) {
         selectionStatus.style.display = 'none';
@@ -1536,10 +1288,7 @@
       selectionStatus.innerHTML =
         'Soma selecionada = <strong style="color:#4ade80">' + lastSelectionSumText + '</strong>' +
         '  (' + count + (count === 1 ? ' valor' : ' valores') + ') ' +
-        '<button type="button" id="btnCopySumOnly" style="' +
-          'margin-left:10px;padding:2px 10px;font-size:0.75rem;font-weight:600;' +
-          'background:transparent;border:1px solid #4ade80;color:#4ade80;border-radius:5px;cursor:pointer;' +
-        '">Copiar soma</button>';
+        '<button type="button" id="btnCopySumOnly" style="margin-left:10px;padding:2px 10px;font-size:0.75rem;font-weight:600;background:transparent;border:1px solid #4ade80;color:#4ade80;border-radius:5px;cursor:pointer;">Copiar soma</button>';
       const btn = document.getElementById('btnCopySumOnly');
       if (btn) {
         btn.addEventListener('click', (e) => {
@@ -1607,12 +1356,10 @@
       const s = getCellRC(table, startCell);
       const e = getCellRC(table, endCell);
       if (!s || !e) return;
-
       const r1 = Math.min(s.row, e.row);
       const r2 = Math.max(s.row, e.row);
       const c1 = Math.min(s.col, e.col);
       const c2 = Math.max(s.col, e.col);
-
       if (!additive) {
         selectedCells.forEach(td => {
           if (td.closest('table') === table) {
@@ -1621,7 +1368,6 @@
           }
         });
       }
-
       for (let r = r1; r <= r2; r++) {
         for (let c = c1; c <= c2; c++) {
           const td = s.all[r * s.cols + c];
@@ -1663,20 +1409,12 @@
       if (!cell) return;
       const table = cell.closest('table');
       if (!isOurTable(table)) return;
-
-      if (cell.tagName === 'TH' && table.id === 'dataTable' && !e.ctrlKey && !e.metaKey && !e.shiftKey) {
-        return;
-      }
-
+      if (cell.tagName === 'TH' && table.id === 'dataTable' && !e.ctrlKey && !e.metaKey && !e.shiftKey) return;
       isDragging = true;
       dragStartCell = cell;
       dragTable = table;
       dragAdditive = e.ctrlKey || e.metaKey;
-
-      if (!dragAdditive && !e.shiftKey) {
-        clearCellSelection();
-      }
-
+      if (!dragAdditive && !e.shiftKey) clearCellSelection();
       cell.classList.add('cell-selected');
       selectedCells.add(cell);
       lastClickedCell = cell;
@@ -1716,20 +1454,16 @@
     });
 
     let justFinishedDrag = false;
-
     document.addEventListener('mouseup', (e) => {
       if (!isDragging) return;
       isDragging = false;
       justFinishedDrag = true;
       setTimeout(() => { justFinishedDrag = false; }, 50);
-
       const cell = e.target.closest('td, th');
       const endCell = (cell && cell.closest('table') === dragTable) ? cell : dragStartCell;
-
       if (dragTable && dragStartCell && endCell) {
         selectRange(dragTable, dragStartCell, endCell, dragAdditive);
       }
-
       if (dragTable) {
         dragTable.querySelectorAll('.cell-selecting').forEach(el => el.classList.remove('cell-selecting'));
       }
@@ -1786,27 +1520,22 @@
 
     // ========== BLOQUEAR F12 e teclas de inspeção ==========
     document.addEventListener('keydown', function(e) {
-      // F12
       if (e.key === 'F12' || e.keyCode === 123) {
         e.preventDefault();
         return false;
       }
-      // Ctrl + Shift + I
       if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i')) {
         e.preventDefault();
         return false;
       }
-      // Ctrl + Shift + J
       if (e.ctrlKey && e.shiftKey && (e.key === 'J' || e.key === 'j')) {
         e.preventDefault();
         return false;
       }
-      // Ctrl + Shift + C
       if (e.ctrlKey && e.shiftKey && (e.key === 'C' || e.key === 'c')) {
         e.preventDefault();
         return false;
       }
-      // Ctrl + U (ver código-fonte)
       if (e.ctrlKey && (e.key === 'u' || e.key === 'U')) {
         e.preventDefault();
         return false;
